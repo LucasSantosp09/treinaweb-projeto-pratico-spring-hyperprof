@@ -1,19 +1,18 @@
 package br.com.treinaweb.hyperprof.core.models;
-
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name="professores")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 @ToString(onlyExplicitlyIncluded = true)
-public class Professor {
+
+public class Professor extends Auditable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -31,7 +30,7 @@ public class Professor {
     @Column(name = "idade")
     private int idade;
 
-    @Column(name = "desscricao")
+    @Column(name = "descricao")
     private String descricao;
 
     @Column(name = "valor_hora")
@@ -42,11 +41,5 @@ public class Professor {
 
     @Column(name = "password")
     private String password;
-
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
-
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
 
 }
