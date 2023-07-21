@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="professores")
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
