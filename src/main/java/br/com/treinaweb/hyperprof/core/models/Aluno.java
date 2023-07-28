@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "alunos")
 @ToString(onlyExplicitlyIncluded = true)
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
-public class Aluno {
+public class Aluno extends Auditable {
 
     @Id
     @ToString.Include

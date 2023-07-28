@@ -3,9 +3,10 @@ package br.com.treinaweb.hyperprof.api.alunos.mappers;
 import br.com.treinaweb.hyperprof.api.alunos.dtos.AlunoRequest;
 import br.com.treinaweb.hyperprof.api.alunos.dtos.AlunoResponse;
 import br.com.treinaweb.hyperprof.core.models.Aluno;
+import org.springframework.stereotype.Component;
 
 
-
+@Component
 public class AlunoMapperImpl implements AlunoMapper {
     @Override
     public Aluno toAluno(AlunoRequest alunoRequest) {
